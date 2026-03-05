@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripts - Авторизация</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-card">
+        <div class="brand">
+            <div class="brand-logo">S</div>
+            <h1 class="brand-name">Suscripts</h1>
+        </div>
+
+        <div id="login-section">
+            <h2>Вход в систему</h2>
+            <p class="subtitle">Введите свои данные для доступа к подпискам</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" placeholder="name@company.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <input type="password" id="loginPassword" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-submit">Войти</button>
+            </form>
+            <p class="switch-text">Нет аккаунта? <a href="#" id="to-register">Создать аккаунт</a></p>
+        </div>
+
+        <div id="register-section" class="hidden">
+            <h2>Регистрация</h2>
+            <p class="subtitle">Начните контролировать свои расходы прямо сейчас</p>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label>Полное имя</label>
+                    <input type="text" id="regName" placeholder="Иван Иванов" required>
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="regEmail" placeholder="name@company.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <input type="password" id="regPassword" placeholder="Минимум 8 символов" minlength="8" required>
+                </div>
+                <button type="submit" class="btn-submit">Зарегистрироваться</button>
+            </form>
+            <p class="switch-text">Уже есть профиль? <a href="#" id="to-login">Войти</a></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
