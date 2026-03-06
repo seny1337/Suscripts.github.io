@@ -610,10 +610,32 @@ function syncData() {
     showToast('Данные синхронизированы', 'success');
 }
 
-function showNotifications() {
-    const active = subscriptions.filter(s => s.status === 'active').length;
-    showToast(`У вас ${active} активных подписок`, 'success');
+function toggleNotifications() {
+    const dropdown = document.getElementById('notificationDropdown');
+    const btn = document.getElementById('notificationBtn');
+    
+    // Переключаем класс active
+    dropdown.classList.toggle('active');
+    
+    // Добавляем визуальный эффект нажатия на кнопку (опционально)
+    if (dropdown.classList.contains('active')) {
+        btn.style.background = '#f8fafc';
+    } else {
+        btn.style.background = 'white';
+    }
 }
+
+// Закрытие меню при клике в любом другом месте экрана
+document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('notificationDropdown');
+    const btn = document.getElementById('notificationBtn');
+    
+    // Если клик был НЕ по меню и НЕ по кнопке
+    if (!dropdown.contains(event.target) && !btn.contains(event.target)) {
+        dropdown.classList.remove('active');
+        if(btn) btn.style.background = 'white';
+    }
+});
 
 function saveSettings() {
     showToast('Настройки сохранены', 'success');
@@ -785,5 +807,6 @@ function confirmLogout() {
         window.location.href = 'login/login.html';
     }, 600);
 }
+
 
 
