@@ -1581,8 +1581,4 @@ body.dark-mode .logout-btn:hover {
     opacity: 0 !important;
     transform: scale(0.98);
     transition: all 0.8s ease-out;
-
 }
-    display: block;
-}
-

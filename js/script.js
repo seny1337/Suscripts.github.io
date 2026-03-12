@@ -612,7 +612,7 @@ function syncData() {
 
 function showNotifications() {
     const active = subscriptions.filter(s => s.status === 'active').length;
-    showToast(У вас ${active} активных подписок, 'success');
+    showToast(`У вас ${active} активных подписок`, 'success');
 }
 
 function saveSettings() {
@@ -785,7 +785,5 @@ function confirmLogout() {
         window.location.href = 'login/login.html';
     }, 600);
 }
-
-
 
 
